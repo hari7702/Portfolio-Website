@@ -28,3 +28,25 @@ let letter = '';
         setTimeout(type, 150); // Adjust the speed of typing
     }
 }());
+
+$(document).ready(function(){
+    $('.project-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        dots: false,  // Disable the dots
+        arrows: false,
+        pauseOnHover: false
+    });
+});
+
+// Visitor Counter
+$(document).ready(function() {
+    var counter = 0;
+    if(localStorage.getItem('visitorCount')) {
+        counter = parseInt(localStorage.getItem('visitorCount'));
+    }
+    counter++;
+    localStorage.setItem('visitorCount', counter);
+    $('#visitor-counter').text(counter);
+});
