@@ -491,3 +491,41 @@ footer {
         right: 0;
     }
 }
+@media screen and (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0; /* Reduced padding to remove empty space */
+    }
+
+    .profile-pic-right {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+        margin-bottom: 10px; /* Reduced bottom margin */
+    }
+
+    .hero-heading {
+        font-size: 28px;
+    }
+
+    .typewriter {
+        font-size: 16px;
+        margin-bottom: 10px;
+        word-break: break-word;
+        white-space: normal; /* Allow text wrapping */
+    }
+
+    .download-cv-btn {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .parallax-background {
+        padding: 50px 0; /* Reduce padding for mobile */
+    }
+}
