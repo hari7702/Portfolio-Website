@@ -68,3 +68,19 @@ function sendEmail(event) {
     const mailtoLink = `mailto:harianirudh0@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
     window.location.href = mailtoLink;
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const countElement = document.getElementById("visitor-count");
+
+    // This is a placeholder for an actual visitor count logic
+    // For now, we simulate it with a random number
+    const visitorCount = Math.floor(Math.random() * 1000) + 1;
+
+    countElement.textContent = visitorCount;
+
+    // Add some animation
+    countElement.style.transition = "opacity 1s";
+    countElement.style.opacity = "0";
+    setTimeout(() => {
+        countElement.style.opacity = "1";
+    }, 100);
+});
