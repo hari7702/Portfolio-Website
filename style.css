@@ -56,9 +56,10 @@ body {
     width: 100%;
 }
 
+/* Responsive Navbar */
 .menu-icon {
     color: #000;
-    display: none;
+    display: block;
     position: fixed;
     right: 20px;
     top: 15px;
@@ -218,50 +219,29 @@ body {
 }
 
 /* Typewriter Effect */
-.typewriter {
+#typewriter-text {
     font-size: 24px;
-    margin-bottom: 30px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 4px solid;
-    visibility: hidden;
-}
-
-.first-line {
-    visibility: visible;
-    animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
-}
-
-.second-line {
-    visibility: hidden;
-    animation: showText 0s 4s forwards, typing 4s steps(48, end) 4s forwards, blink-caret 0.75s step-end infinite 4s;
+    border-right: 2px solid;
+    display: inline-block;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
-    from { 
-        width: 0; 
-    }
-    to { 
-        width: 100%; 
-    }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 @keyframes blink-caret {
-    from, to { 
-        border-color: transparent; 
-    }
-    50% { 
-        border-color: #fff; 
-    }
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
 }
 
-@keyframes showText {
-    from {
-        visibility: hidden;
-    }
-    to {
-        visibility: visible;
-    }
+/* Animation Keyframes */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
 }
 
 /* Buttons */
