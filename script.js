@@ -1,32 +1,30 @@
-$(document).ready(function(){
-    $('.project-slider').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        fade: true,
-        speed: 700,
-        dots: true,
-        arrows: true
-    });
+const texts = [
+    "Aspiring Data Scientist",
+    "AI Enthusiast",
+    "A Tech Explorer",
+    "A Graphic Designer",
+    "Karate Mentor"
+];
 
-    // Mobile menu functionality
-    $('.menu-icon').click(function() {
-        $('.res-navbar').toggleClass('show');
-    });
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
 
-    $('.close-icon').click(function() {
-        $('.res-navbar').removeClass('show');
-    });
+(function type() {
+    if (count === texts.length) {
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
 
-    $('.res-navbtn').click(function() {
-        $('.res-navbar').removeClass('show');
-    });
+    document.getElementById('typewriter-text').textContent = letter;
 
-    $('.contact-form').on('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for reaching out! Your message has been sent.');
-    });
-
-    AOS.init({
-        duration: 1200,
-    });
-});
+    if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1000); // Wait 1 second before typing the next word
+    } else {
+        setTimeout(type, 150); // Adjust the speed of typing
+    }
+}());
