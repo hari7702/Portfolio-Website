@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hari Prasath P - Portfolio</title>
+    <title>Hari Prasath P - Data Scientist</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="navname">Hari Prasath P</div>
-        <div class="navlinks">
+        <div class="navname" data-aos="fade-down">Hari Prasath P</div>
+        <div class="navlinks" data-aos="fade-down">
             <a href="#about" class="navbtn">About</a>
             <a href="#skills" class="navbtn">Skills</a>
             <a href="#experience" class="navbtn">Experience</a>
@@ -43,44 +44,109 @@
             <img src="images/profile.png" alt="Hari Prasath P" class="profile-pic-right animated-profile">
         </div>
     </section>
+    
 
     <section id="about">
-        <!-- About Section Content -->
+        <div class="aboutinner" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>I'm a recent graduate with a Bachelor of Science in Computer Science from Dravidian University, where I specialized in Data Science and Software Engineering. My educational background, combined with hands-on experience, has equipped me with a strong foundation in data science, analytics, and business intelligence. I have a deep understanding of programming languages such as Python, R, and SQL, and have developed proficiency in tools like Tableau, Power BI, and machine learning frameworks including Scikit-Learn and TensorFlow.</p>
+            <p>During my internship at AI Variant, I mastered statistical analysis, data mining, and machine learning. I successfully developed and implemented machine learning models, which enhanced forecasting accuracy by 10%. These models were instrumental in driving data-driven decision-making and fostering business growth. My passion for AI and data science drives me to continuously learn and apply new techniques to solve complex business problems.</p>
+            <p>I am currently seeking an entry-level role in Data Science or Analytics, where I can leverage my skills to contribute to a dynamic and innovative team. My goal is to help organizations make informed decisions through data-driven insights.</p>
+
+            <h3>Education</h3>
+            <p>Bachelor of Science in Computer Science, Dravidian University, India (Nov 2021 - May 2024)</p>
+            <p>Certifications:
+                <ul>
+                    <li>Data Science Certification – ExcelR Solutions</li>
+                    <li>Salesforce Developer/Admin – Smartinternz</li>
+                </ul>
+            </p>
+        </div>
     </section>
 
     <section id="skills">
-        <!-- Skills Section Content -->
+        <h2>Skills</h2>
+        <div class="skillscontainer" data-aos="fade-up">
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <p>Python, R, SQL, Java, JavaScript</p>
+            </div>
+            <div class="skill">
+                <h3>Data Processing & Visualization</h3>
+                <p>Pandas, NumPy, Matplotlib, Seaborn, Plotly, ggplot2, Tableau, Power BI</p>
+            </div>
+            <div class="skill">
+                <h3>Machine Learning & AI</h3>
+                <p>Scikit-Learn, TensorFlow, Keras, XGBoost, Random Forest, NLP, Deep Learning, Neural Networks, Computer Vision</p>
+            </div>
+            <div class="skill">
+                <h3>Web Development</h3>
+                <p>HTML, CSS3, JavaScript, React JS, RESTful APIs</p>
+            </div>
+            <div class="skill">
+                <h3>Chatbot Development</h3>
+                <p>Python (EmbedChain with OpenAI), NLTK (Natural Language Toolkit), ChatterBot</p>
+            </div>
+            <div class="skill">
+                <h3>Tools & Cloud Platforms</h3>
+                <p>Jupyter Notebooks, Google Colab, RStudio, VS Code, Git, GitHub, Azure, Salesforce CRM</p>
+            </div>
+            <div class="skill">
+                <h3>Graphic Designing</h3>
+                <p>Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe Creative Suite, Figma, Canva</p>
+            </div>
+            <div class="skill">
+                <h3>Other Skills</h3>
+                <p>Hypothesis Testing, Statistical Modeling, Feature Engineering, Model Deployment, Microsoft Office, Google Workspace</p>
+            </div>
+        </div>
     </section>
 
     <section id="experience">
-        <!-- Experience Section Content -->
+        <h2>Experience</h2>
+        <div class="experiencecontainer" data-aos="fade-up">
+            <div class="experience">
+                <h3>Data Science Intern at AI Variant (Feb 2024 - Present)</h3>
+                <p>As a Data Science Intern at AI Variant, I was responsible for conducting statistical analysis, data mining, and machine learning. I leveraged Python and R for data analysis and visualization, utilizing tools like Power BI and Matplotlib. One of my key achievements was the development and implementation of machine learning models, which enhanced forecasting accuracy by 10%. My work involved translating complex data insights into actionable business strategies, enabling the company to make informed decisions and drive growth.</p>
+            </div>
+            <div class="experience">
+                <h3>Salesforce Developer/Admin Intern at Smartinternz (Sep 2023 - Feb 2024)</h3>
+                <p>During my internship at Smartinternz, I gained extensive experience in Salesforce development and administration. I worked on integrating external APIs, customizing Salesforce workflows, and collaborating with cross-functional teams to streamline operations. My role also involved automating processes and optimizing the Salesforce platform to improve service delivery and customer engagement.</p>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-slider">
-            <div class="project">
+            <div class="project" data-aos="zoom-in">
                 <h3>Customer Segmentation Analysis</h3>
-                <img src="images/Customer-Segmentation-Analysis.jpg" alt="Customer Segmentation" class="projectimage">
-                <p>Developed clustering models to segment customers based on purchasing behavior, enabling targeted marketing strategies.</p>
+                <img src="images/Customer-Segmentation-Analysis.jpg" alt="Customer Segmentation" class="projectimage hover-zoom">
+                <p>Developed clustering models to segment customers based on purchasing behavior, enabling targeted marketing strategies. The project utilized Python, Scikit-Learn, and visualization tools to deliver insights that improved customer engagement and product recommendations.</p>
                 <a href="https://github.com/hari7702/customer-segmentation" class="projectbutton">View on GitHub</a>
             </div>
-            <div class="project">
+            <div class="project" data-aos="zoom-in">
                 <h3>Bankruptcy Prevention Model</h3>
-                <img src="images/Digital-banking-platform-making-opt.jpg" alt="Bankruptcy Prevention" class="projectimage">
-                <p>Built a classification model using Python and Scikit-Learn to predict company bankruptcy based on key risk factors.</p>
+                <img src="images/Digital-banking-platform-making-opt.jpg" alt="Bankruptcy Prevention" class="projectimage hover-zoom">
+                <p>Built a classification model using Python and Scikit-Learn to predict company bankruptcy based on key risk factors. The model was deployed using Flask/Streamlit for real-time risk assessment, helping businesses with early intervention strategies.</p>
                 <a href="https://github.com/hari7702/bankruptcy-prevention" class="projectbutton">View on GitHub</a>
             </div>
-            <div class="project">
+            <div class="project" data-aos="zoom-in">
                 <h3>Sentiment Analysis on Social Media</h3>
-                <img src="images/social-media-sentiment-analysis-blog-cover.png" alt="Sentiment Analysis" class="projectimage">
-                <p>Implemented sentiment analysis on social media platforms to gauge public opinion on specific topics.</p>
+                <img src="images/social-media-sentiment-analysis-blog-cover.png" alt="Sentiment Analysis" class="projectimage hover-zoom">
+                <p>Implemented sentiment analysis on social media platforms to gauge public opinion on specific topics. This project involved NLP techniques using Python and NLTK, providing valuable insights into public sentiment.</p>
                 <a href="https://github.com/hari7702/sentiment-analysis" class="projectbutton">View on GitHub</a>
             </div>
-            <div class="project">
+            <div class="project" data-aos="zoom-in">
+                <h3>Airline Management System (Salesforce CRM)</h3>
+                <img src="images/how-to-fly-comfortably-in-economy-class-on-long-distance-international-flight.png" alt="Airline Management System" class="projectimage hover-zoom">
+                <p>Developed an airline management system using Salesforce CRM to streamline operations, manage customer interactions, and improve service delivery. This project involved customizing Salesforce workflows and integrating third-party APIs.</p>
+                <a href="https://github.com/hari7702/airline-management" class="projectbutton">View on GitHub</a>
+            </div>
+            <div class="project" data-aos="zoom-in">
                 <h3>Sales Dashboard</h3>
-                <img src="images/Sample Dashboard.png" alt="Sales Dashboard" class="projectimage">
-                <p>Developed an interactive sales dashboard using Power BI to visualize sales data and provide actionable insights.</p>
+                <img src="images/Sample Dashboard.png" alt="Sales Dashboard" class="projectimage hover-zoom">
+                <p>Developed an interactive sales dashboard using Power BI to visualize sales data and provide actionable insights. This project enhanced decision-making by providing key metrics on sales performance, customer segmentation, and trend analysis.</p>
                 <a href="https://github.com/hari7702/sales-dashboard" class="projectbutton">View on GitHub</a>
             </div>
         </div>
@@ -88,7 +154,7 @@
 
     <section id="contact">
         <div class="contact-container">
-            <form class="contact-form" method="POST" action="https://formspree.io/f/your_form_id">
+            <form class="contact-form" onsubmit="sendEmail(event)">
                 <h2>Contact Me 😊</h2>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -106,6 +172,7 @@
             </div>
         </div>
     </section>
+    
 
     <footer>
         <p>© 2024 Hari Prasath P. All Rights Reserved.</p>
@@ -116,6 +183,9 @@
         <div class="visitor-count">Visitors: <span id="visitor-counter"></span></div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
