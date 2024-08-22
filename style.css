@@ -5,6 +5,82 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+.dark-mode .navbar, .dark-mode footer, .dark-mode .contact-container {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p, .dark-mode a {
+    color: #f4f4f4;
+}
+
+.dark-mode .section {
+    background-color: #1c1c1c;
+}
+
+.dark-mode .navbtn, .dark-mode .res-navbtn, .dark-mode a, .dark-mode .download-cv-btn, .dark-mode .projectbutton {
+    color: #f4f4f4;
+}
+
+.dark-mode .projectbutton:hover {
+    background-color: #555;
+}
+
+/* Dark mode switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
 }
 
 /* Navbar Styles */
@@ -21,14 +97,44 @@ body {
     align-items: center;
 }
 
+/* Updated navname with typewriter effect */
 .navname {
     font-size: 15px;
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#typewriter-nav {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    display: inline-block;
+    animation: typing-nav 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing-nav {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #000; }
+}
+
+.switch {
+    margin-left: 15px; /* Adjust margin between text and toggle switch */
 }
 
 .navlinks {
     display: flex;
-    gap: 15px;
+    justify-content: center; /* Centers the links */
+    gap: 2px;
+    flex-wrap: wrap;
+    margin-left: auto; /* Move navlinks to the center */
+    margin-right: auto; /* Center the navlinks container */
 }
 
 .navbtn {
@@ -39,6 +145,7 @@ body {
     border-radius: 5px;
     position: relative;
     transition: background-color 0.3s ease;
+    font-size: 14px;
 }
 
 .navbtn:before {
@@ -134,7 +241,7 @@ body {
     background-size: cover;
     color: #fff;
     text-align: center;
-    padding: 100px 0; /* Adjusted padding for PC view */
+    padding: 60px 0; /* Adjusted padding for mobile */
 }
 
 .hero-content {
@@ -169,7 +276,7 @@ body {
 }
 
 .hero-heading {
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 10px;
     animation: fadeInText 2s ease forwards;
 }
@@ -187,7 +294,7 @@ body {
 
 /* Typewriter Effect */
 #typewriter-text {
-    font-size: 24px;
+    font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
@@ -240,15 +347,33 @@ body {
     transform: translate(-50%, -50%) scale(1.5);
 }
 
-/* Sections */
-.section {
-    padding: 50px 20px;
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
 }
 
-#about, #skills, #experience, #projects, #contact {
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Sections */
+.section {
+    padding: 40px 20px;
+}
+
+#about, #skills, #experience, #projects, #upcoming-projects, #contact {
     background-color: #fff;
-    padding: 50px;
+    padding: 40px;
     margin: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode #about, .dark-mode #skills, .dark-mode #experience, .dark-mode #projects, .dark-mode #upcoming-projects, .dark-mode #contact {
+    background-color: #1c1c1c;
 }
 
 h2 {
@@ -257,7 +382,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.skill, .experience, .project {
+.skill, .experience, .project, .upcoming-project {
     margin-bottom: 20px;
 }
 
@@ -333,6 +458,7 @@ h2 {
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-form h2 {
@@ -427,7 +553,8 @@ footer {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        padding: 50px 20px;
+        padding: 30px 10px; /* Reduce padding for mobile */
+        margin: 0; /* Remove margin */
     }
 
     .profile-pic-right {
@@ -455,21 +582,33 @@ footer {
 
     .hero-text {
         max-width: 100%;
+        margin: 0 auto; /* Center content */
+        padding: 0 10px; /* Add padding for content */
     }
 
     .parallax-background {
-        padding: 50px 0; /* Reduce padding for mobile */
+        padding: 40px 0; /* Reduce padding for mobile */
+    }
+
+    .section {
+        padding: 20px 10px; /* Adjust padding for sections */
+        margin: 10px 0; /* Adjust margin for sections */
+    }
+
+    .contact-container {
+        padding: 20px 10px; /* Adjust padding for contact form */
     }
 }
+
 
 /* PC View Adjustments */
 @media screen and (min-width: 769px) {
     .hero-heading {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .typewriter {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .profile-pic-right {
@@ -478,9 +617,10 @@ footer {
     }
 
     .parallax-background {
-        padding: 100px 0; /* Maintain padding for PC */
+        padding: 60px 0; /* Maintain padding for PC */
     }
 }
+
 /* Remove 3 Dots in Mobile Navigation */
 @media screen and (max-width: 768px) {
     .menu-icon {
@@ -491,41 +631,23 @@ footer {
         right: 0;
     }
 }
-@media screen and (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 0; /* Reduced padding to remove empty space */
-    }
 
-    .profile-pic-right {
-        width: 150px;
-        height: 150px;
-        margin-top: 20px;
-        margin-bottom: 10px; /* Reduced bottom margin */
-    }
+/* Typewriter Effect in Nav */
+#typewriter-nav {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    display: inline-block;
+    animation: typing-nav 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 
-    .hero-heading {
-        font-size: 28px;
-    }
+@keyframes typing-nav {
+    from { width: 0; }
+    to { width: 100%; }
+}
 
-    .typewriter {
-        font-size: 16px;
-        margin-bottom: 10px;
-        word-break: break-word;
-        white-space: normal; /* Allow text wrapping */
-    }
-
-    .download-cv-btn {
-        padding: 8px 16px;
-        font-size: 16px;
-    }
-
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .parallax-background {
-        padding: 50px 0; /* Reduce padding for mobile */
-    }
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #000; }
 }
