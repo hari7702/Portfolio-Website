@@ -1,3 +1,4 @@
+// Typewriter effect for the hero section
 const texts = [
     "Aspiring Data Scientist",
     "AI Enthusiast",
@@ -29,8 +30,6 @@ let letter = '';
     }
 }());
 
-
-
 $(document).ready(function(){
     $('.project-slider').slick({
         autoplay: true,
@@ -59,15 +58,30 @@ $(document).ready(function(){
     });
 });
 
+// Dark Mode Toggle Switch Functionality
+document.getElementById('toggle-switch-checkbox').addEventListener('change', function() {
+    document.body.classList.toggle('dark-mode');
+    const contactContainer = document.querySelector('.contact-container');
+    if (this.checked) {
+        contactContainer.style.backgroundColor = '#1e1e1e';
+        contactContainer.style.color = '#f4f4f4';
+    } else {
+        contactContainer.style.backgroundColor = '#f9f9f9';
+        contactContainer.style.color = '#333';
+    }
+});
+
+
 function sendEmail(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const message = document.getElement.getElementById('message').value;
 
     const mailtoLink = `mailto:harianirudh0@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
     window.location.href = mailtoLink;
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     const countElement = document.getElementById("visitor-count");
 
@@ -83,4 +97,18 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         countElement.style.opacity = "1";
     }, 100);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navText = "Hari's Pathway...</>";
+    let index = 0;
+    
+    function typeNav() {
+        document.getElementById('typewriter-nav').textContent = navText.slice(0, ++index);
+        if (index < navText.length) {
+            setTimeout(typeNav, 150); // Adjust typing speed if necessary
+        }
+    }
+    
+    typeNav();
 });
