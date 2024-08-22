@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hari Prasath P's portfolio showcasing data science projects, upcoming projects, and skills.">
+    <meta name="keywords" content="Data Science, AI, Machine Learning, Portfolio, Case Studies, Blogs, Skills">
+    <meta name="author" content="Hari Prasath P">
     <title>Hari Prasath P - Data Scientist</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
@@ -11,14 +14,23 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navname" data-aos="fade-down">Hari Prasath P</div>
-        <div class="navlinks" data-aos="fade-down">
+        <div class="navname">
+            <span id="typewriter-nav"></span>
+            <label class="switch">
+                <input type="checkbox" id="toggle-switch-checkbox">
+                <span class="slider"></span>
+            </label>
+            <span style="margin-left: 10px;">Dark Mode</span>
+        </div>
+        <div class="navlinks">
             <a href="#about" class="navbtn">About</a>
             <a href="#skills" class="navbtn">Skills</a>
             <a href="#experience" class="navbtn">Experience</a>
             <a href="#projects" class="navbtn">Projects</a>
+            <a href="#upcoming-projects" class="navbtn">Upcoming Projects</a>
             <a href="#contact" class="navbtn">Contact</a>
         </div>
+        <i class="menu-icon fas fa-bars"></i>    
         <div class="menu-icon">&#9776;</div>
         <div class="res-navbar">
             <div class="res-right">
@@ -27,6 +39,7 @@
                 <a href="#skills" class="res-navbtn">Skills</a>
                 <a href="#experience" class="res-navbtn">Experience</a>
                 <a href="#projects" class="res-navbtn">Projects</a>
+                <a href="#upcoming-projects" class="res-navbtn">Upcoming Projects</a>
                 <a href="#contact" class="res-navbtn">Contact</a>
             </div>
         </div>
@@ -40,11 +53,18 @@
                     <span id="typewriter-text"></span>
                 </p>
                 <a href="Hari_Prasath_Data.pdf" class="download-cv-btn ripple">Download CV</a>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hari-prasath-9bab91299/" target="_blank">
+                        <img src="images/Linkedln-removebg-preview.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/hari7702/" target="_blank">
+                        <img src="images/github-removebg-preview.png" alt="GitHub">
+                    </a>
+                </div>
             </div>
             <img src="images/profile.png" alt="Hari Prasath P" class="profile-pic-right animated-profile">
         </div>
     </section>
-    
 
     <section id="about" class="section">
         <h2>About Me</h2>
@@ -68,15 +88,14 @@
         
         <p>Beyond my technical expertise, I am driven by a passion for continuous learning and problem-solving. I thrive in environments that challenge me to think critically and apply my knowledge to solve complex problems. My goal is to leverage my skills to drive data-driven decisions that foster business growth and innovation.</p>
     
-            <h3>Education</h3>
-            <p>Bachelor of Science in Computer Science, Dravidian University, India (Nov 2021 - May 2024)</p>
-            <p>Certifications:
-                <ul>
-                    <li>Data Science Certification – ExcelR Solutions</li>
-                    <li>Salesforce Developer/Admin – Smartinternz</li>
-                </ul>
-            </p>
-        </div>
+        <h3>Education</h3>
+        <p>Bachelor of Science in Computer Science, Dravidian University, India (Nov 2021 - May 2024)</p>
+        <p>Certifications:
+            <ul>
+                <li>Data Science Certification – ExcelR Solutions</li>
+                <li>Salesforce Developer/Admin – Smartinternz</li>
+            </ul>
+        </p>
     </section>
 
     <section id="skills">
@@ -92,7 +111,7 @@
             </div>
             <div class="skill">
                 <h3>Machine Learning & AI</h3>
-                <p>Scikit-Learn, TensorFlow, Keras, XGBoost, Random Forest, NLP, Deep Learning, Neural Networks, Computer Vision</p>
+                <p>Scikit-Learn, TensorFlow, Keras, XGBoost, Random Forest, NLP, Deep Learning</p>
             </div>
             <div class="skill">
                 <h3>Web Development</h3>
@@ -120,12 +139,12 @@
     <section id="experience" class="section">
         <h2>Experience</h2>
         <div class="experience">
-            <h3>Data Science Intern at AI Variant <em>(Feb 2024 - Present)</em></h3>
+            <h3>Data Science Intern at AI Variant </h3>
             <p>During my internship at <strong>AI Variant</strong>, I mastered <strong>statistical analysis</strong>, <strong>data mining</strong>, and <strong>machine learning</strong>. I successfully developed and implemented machine learning models, which enhanced <strong>forecasting accuracy by 10%</strong>. These models were instrumental in driving <strong>data-driven decision-making</strong> and fostering business growth. My passion for AI and data science drives me to continuously learn and apply new techniques to solve complex business problems.</p>
         </div>
     
         <div class="experience">
-            <h3>Salesforce Developer/Admin Intern at SmartInternz <em>(Sep 2023 - Feb 2024)</em></h3>
+            <h3>Salesforce Developer/Admin Intern at SmartInternz </em></h3>
             <p>During my internship at <strong>SmartInternz</strong>, I worked on multiple projects that involved <strong>Salesforce CRM</strong> customization and <strong>process automation</strong>. I gained hands-on experience in developing and implementing Salesforce solutions that streamlined business operations and improved overall efficiency.</p>
         </div>
     </section>
@@ -136,58 +155,79 @@
             <div class="project" data-aos="zoom-in">
                 <h3>Customer Segmentation Analysis</h3>
                 <img src="images/Customer-Segmentation-Analysis.jpg" alt="Customer Segmentation" class="projectimage hover-zoom">
-                <p>Developed clustering models to segment customers based on purchasing behavior, enabling targeted marketing strategies. The project utilized Python, Scikit-Learn, and visualization tools to deliver insights that improved customer engagement and product recommendations.</p>
+                <p>Developed <strong>clustering models</strong> to segment customers based on purchasing behavior, enabling targeted marketing strategies. The project utilized Python, Scikit-Learn, and visualization tools to deliver insights that improved customer engagement and product recommendations. It involved cleaning and preprocessing a large dataset, applying various clustering algorithms like K-means, and evaluating model performance. The insights gained from the analysis were pivotal in shaping the client’s marketing campaigns, resulting in a significant increase in sales conversions.</p>
                 <a href="https://github.com/hari7702/customer-segmentation" class="projectbutton">View on GitHub</a>
             </div>
             <div class="project" data-aos="zoom-in">
                 <h3>Bankruptcy Prevention Model</h3>
                 <img src="images/Digital-banking-platform-making-opt.jpg" alt="Bankruptcy Prevention" class="projectimage hover-zoom">
-                <p>Built a classification model using Python and Scikit-Learn to predict company bankruptcy based on key risk factors. The model was deployed using Flask/Streamlit for real-time risk assessment, helping businesses with early intervention strategies.</p>
+                <p>Built a <strong>classification model</strong> using Python and Scikit-Learn to predict company bankruptcy based on key risk factors. The model was deployed using Flask/Streamlit for real-time risk assessment, helping businesses with early intervention strategies. This project required thorough <strong>feature engineering</strong>, balancing the dataset to handle class imbalance, and implementing a robust model evaluation strategy. The model's predictions enabled companies to mitigate potential financial losses by identifying at-risk entities early and taking preventive actions.</p>
                 <a href="https://github.com/hari7702/bankruptcy-prevention" class="projectbutton">View on GitHub</a>
             </div>
             <div class="project" data-aos="zoom-in">
                 <h3>Sentiment Analysis on Social Media</h3>
                 <img src="images/social-media-sentiment-analysis-blog-cover.png" alt="Sentiment Analysis" class="projectimage hover-zoom">
-                <p>Implemented sentiment analysis on social media platforms to gauge public opinion on specific topics. This project involved NLP techniques using Python and NLTK, providing valuable insights into public sentiment.</p>
+                <p>Implemented <strong>sentiment analysis</strong> on social media platforms to gauge public opinion on specific topics. This project involved <strong>NLP techniques</strong> using Python and NLTK, providing valuable insights into public sentiment. The project included data collection through APIs, text preprocessing, and sentiment classification using machine learning models. The outcomes were used to inform client strategies in public relations and marketing, ensuring a positive brand image.</p>
                 <a href="https://github.com/hari7702/sentiment-analysis" class="projectbutton">View on GitHub</a>
             </div>
             <div class="project" data-aos="zoom-in">
                 <h3>Airline Management System (Salesforce CRM)</h3>
                 <img src="images/how-to-fly-comfortably-in-economy-class-on-long-distance-international-flight.png" alt="Airline Management System" class="projectimage hover-zoom">
-                <p>Developed an airline management system using Salesforce CRM to streamline operations, manage customer interactions, and improve service delivery. This project involved customizing Salesforce workflows and integrating third-party APIs.</p>
+                <p>Developed an <strong>airline management system</strong> using Salesforce CRM to streamline operations, manage customer interactions, and improve service delivery. This project involved customizing Salesforce workflows and integrating third-party APIs. The system automated various customer service tasks, such as ticket bookings, customer inquiries, and feedback collection, enhancing overall customer satisfaction and operational efficiency.</p>
                 <a href="https://github.com/hari7702/airline-management" class="projectbutton">View on GitHub</a>
             </div>
             <div class="project" data-aos="zoom-in">
                 <h3>Sales Dashboard</h3>
                 <img src="images/Sample Dashboard.png" alt="Sales Dashboard" class="projectimage hover-zoom">
-                <p>Developed an interactive sales dashboard using Power BI to visualize sales data and provide actionable insights. This project enhanced decision-making by providing key metrics on sales performance, customer segmentation, and trend analysis.</p>
+                <p>Developed an <strong>interactive sales dashboard</strong> using Power BI to visualize sales data and provide actionable insights. This project enhanced decision-making by providing key metrics on sales performance, customer segmentation, and trend analysis. The dashboard integrated data from multiple sources, applied complex data transformations, and enabled real-time updates. As a result, the client could monitor sales KPIs more effectively, leading to a 25% improvement in sales productivity.</p>
                 <a href="https://github.com/hari7702/sales-dashboard" class="projectbutton">View on GitHub</a>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="upcoming-projects" class="section">
+        <h2>Upcoming Projects</h2>
+        <div class="upcoming-project" data-aos="fade-up">
+            <h3>Real-Time Sentiment Analysis on Social Media</h3>
+            <p>A project focused on monitoring live sentiments across multiple social media platforms using advanced NLP techniques.</p>
+        </div>
+        <div class="upcoming-project" data-aos="fade-up">
+            <h3>AI-Powered E-commerce Recommendation System</h3>
+            <p>Developing a system that offers personalized shopping recommendations using deep learning.</p>
+        </div>
+        <div class="upcoming-project" data-aos="fade-up">
+            <h3>Interactive Data Visualization Dashboard for Financial Analytics</h3>
+            <p>Creating a dashboard that enables users to interact with and explore financial datasets in real-time.</p>
+        </div>
+        <div class="upcoming-project" data-aos="fade-up">
+            <h3>Predictive Maintenance for Manufacturing</h3>
+            <p>Utilizing machine learning algorithms to predict equipment failures and schedule maintenance, reducing downtime and operational costs.</p>
+        </div>
+        <div class="upcoming-project" data-aos="fade-up">
+            <h3>AI-Based Healthcare Diagnosis System</h3>
+            <p>Developing an AI-based system to assist healthcare professionals in diagnosing diseases and recommending treatment plans.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
         <div class="contact-container">
+            <p>If you're interested in collaborating on data science, AI, or any other exciting projects, don't hesitate to reach out. I'm always open to new opportunities and challenges that push the boundaries of what we can achieve with technology. Whether it's building innovative solutions, conducting research, or developing new skills, let's work together to make a significant impact.</p>
+            <h2>Contact Me 😊</h2>
             <form class="contact-form" onsubmit="sendEmail(event)">
-                <h2>Contact Me 😊</h2>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit" class="ripple">Send Message</button>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
             <div class="contact-info">
-                <a href="mailto:harianirudh0@gmail.com"><i class="far fa-envelope"></i> Email</a>
-                <a href="tel:+91-7702-9916-79"><i class="fas fa-phone"></i> Call</a>
-                <a href="https://www.linkedin.com/in/hari-prasath-9bab91299/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/hari7702/"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:harianirudh0@gmail.com">Email</a>
+                <a href="tel:+919876543210">Call</a>
+                <a href="https://www.linkedin.com/in/hari-prasath-9bab91299/">LinkedIn</a>
+                <a href="https://github.com/hari7702/">GitHub</a>
             </div>
         </div>
     </section>
     
-
     <footer>
         <p>© 2024 Hari Prasath P. All Rights Reserved.</p>
         <div class="social-links">
@@ -195,14 +235,12 @@
             <a href="https://github.com/hari7702/" target="_blank">GitHub</a>
         </div>
         
-            <div class="visitor-count">
-                <p>You are visitor number:</p>
-                <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
-    <img src="https://hitwebcounter.com/counter/counter.php?page=15766079&style=0010&nbdigits=9&type=ip&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
-</a>    
-            </div>
-        
+        <div class="visitor-count">
+            <p>You are visitor number:</p>
+            <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=15766079&style=0010&nbdigits=9&type=ip&initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+            </a>    
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
